@@ -1,0 +1,176 @@
+/* === Base Styles === */
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+header {
+  background: #4a90e2;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+h1 { margin: 0; }
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+section {
+  flex: 1 1 300px;
+}
+
+/* === Calendar Styles === */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.calendar-header button {
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.calendar-header h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+/* the grid container */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  text-align: center;
+  align-items: start;
+}
+
+/* weekday labels and day cells are both children of .calendar-grid */
+.day-name {
+  font-weight: bold;
+  padding: 8px 0;
+  background: transparent;
+}
+.calendar-day {
+  padding: 10px 4px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.15s;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calendar-day:hover {
+  background: #e2ecf7;
+}
+.calendar-day.today {
+  background: #4a90e2;
+  color: white;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  margin: 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.calendar-day.selected {
+  background: #357abd;
+  color: white;
+  width: 36px;
+  height: 36px;
+  margin: 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* === Monthly Summary === */
+.summary-section {
+  background: #f7f9fc;
+  border: 1px solid #e1e4e8;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.summary-section h2 {
+  margin-top: 0;
+  color: #4a90e2;
+}
+.summary-section p {
+  margin: 5px 0;
+  font-size: 1.1rem;
+}
+
+/* === Task Section === */
+.task-section h2 {
+  margin-top: 0;
+  text-align: center;
+}
+.task-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.task-input input,
+.task-input button {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.task-input button {
+  background: #4a90e2;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.task-input button:hover {
+  background: #357abd;
+}
+ul#tasks {
+  list-style: none;
+  padding: 0;
+}
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eef2f7;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+.task-item.done .task-text {
+  text-decoration: line-through;
+  color: #777;
+}
+.task-buttons button {
+  margin-left: 5px;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.done-btn { background: #5cb85c; color: white; }
+.delete-btn { background: #d9534f; color: white; }
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #f8f8f8;
+  margin-top: 20px;
+}
