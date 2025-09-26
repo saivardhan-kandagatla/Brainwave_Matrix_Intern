@@ -8,6 +8,7 @@
    or for best results use a local server:
 
 Option A – Using VS Code Live Server
+
 1.Install the Live Server extension.
 2.Right-click index.html → Open with Live Server.
 
